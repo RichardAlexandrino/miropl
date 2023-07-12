@@ -7,6 +7,7 @@ public class ProductMinDTO {
 	private Long id;
 	private String name;
 	private Double quantity;
+	private Double price;
 	private String imgUrl;
 	private String shortDescription;
 	
@@ -17,6 +18,7 @@ public class ProductMinDTO {
 		id = entity.getId();
 		name = entity.getName();
 		quantity = entity.getQuantity();
+		price = entity.getPrice();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
 	}
@@ -31,6 +33,10 @@ public class ProductMinDTO {
 
 	public Double getQuantity() {
 		return quantity;
+	}
+	
+	public Double getPrice() {
+		return price;
 	}
 
 	public String getImgUrl() {

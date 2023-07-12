@@ -18,6 +18,7 @@ public class Product {
 	private Long id;
 	private String name;
 	private Double quantity;
+	private Double price;
 	private String imgUrl;
 	
 	@Column(columnDefinition = "TEXT")
@@ -29,11 +30,12 @@ public class Product {
 	public Product() {
 	}
 
-	public Product(Long id, String name, Double quantity, String imgUrl, String shortDescription,
+	public Product(Long id, String name, Double quantity, Double price, String imgUrl, String shortDescription,
 			String longDescription) {
 		this.id = id;
 		this.name = name;
 		this.quantity = quantity;
+		this.price = price;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
@@ -61,6 +63,14 @@ public class Product {
 
 	public void setQuantity(Double quantity) {
 		this.quantity = quantity;
+	}
+	
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 
 	public String getImgUrl() {
