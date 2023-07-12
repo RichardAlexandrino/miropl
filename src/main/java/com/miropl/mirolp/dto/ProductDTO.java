@@ -1,4 +1,4 @@
-package com.miropl.mirolp.dot;
+package com.miropl.mirolp.dto;
 
 import org.springframework.beans.BeanUtils;
 

@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.miropl.mirolp.dot.ProductDTO;
-import com.miropl.mirolp.dot.ProductMinDTO;
+import com.miropl.mirolp.dto.ProductDTO;
+import com.miropl.mirolp.dto.ProductMinDTO;
 import com.miropl.mirolp.entities.Product;
 import com.miropl.mirolp.repositories.ProductRepository;
 
