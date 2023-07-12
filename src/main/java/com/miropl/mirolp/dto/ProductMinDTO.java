@@ -1,6 +1,7 @@
 package com.miropl.mirolp.dto;
 
 import com.miropl.mirolp.entities.Product;
+import com.miropl.mirolp.projections.ProductMinProjection;
 
 public class ProductMinDTO {
 
@@ -21,6 +22,15 @@ public class ProductMinDTO {
 		price = entity.getPrice();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescription();
+	}
+	
+	public ProductMinDTO(ProductMinProjection projection) {
+		id = projection.getId();
+		name = projection.getName();
+		quantity = projection.getQuantity();
+		price = projection.getPrice();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
