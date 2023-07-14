@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.miropl.mirolp.dto.ProductListDTO;
 import com.miropl.mirolp.dto.ProductMinDTO;
+import com.miropl.mirolp.dto.ReplacementDTO;
 import com.miropl.mirolp.service.ProductListService;
 import com.miropl.mirolp.service.ProductService;
 
@@ -33,4 +36,8 @@ public class ProductListController {
 		return productService.findByList(listId);
 	}
 	
+	@PostMapping(value = "/{listId}/replacement")
+	public void move(@PathVariable Long listId, @RequestBody ReplacementDTO body) {
+		productListService.move(listId, body.getSourceIndex(), body.getDestinationIndex());
+	}
 }
